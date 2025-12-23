@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
+  const SecondPage({super.key, required List<String> names});
 
   @override
   Widget build(BuildContext context) {
@@ -22,3 +22,4 @@ class SecondPage extends StatelessWidget {
     );
   }
 }
+ 

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass_course/app_routes.dart';
 import 'package:masterclass_course/pages/first_page.dart';
+import 'package:masterclass_course/pages/home_page.dart';
+import 'package:masterclass_course/pages/profile_page.dart';
 import 'package:masterclass_course/pages/second_page.dart';
+import 'package:masterclass_course/pages/settings_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,7 +24,11 @@ class MyApp extends StatelessWidget {
       ),
       home: FirstPage(),
       routes: {
-        "/secondpage": (context) => SecondPage()
+        AppRoutes.firstPage: (context) => FirstPage(),
+        AppRoutes.secondPage: (context) => SecondPage(names: names,),
+        AppRoutes.settingsPage: (context) => SettingsPage(),
+        AppRoutes.homePage: (context) => HomePage(),
+        AppRoutes.profilePage: (context) => ProfilePage()
       },
     );
   }
